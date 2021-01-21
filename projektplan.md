@@ -2,7 +2,8 @@
 
 ## 1. Projektbeskrivning (Beskriv vad sidan ska kunna göra).
 ## 2. Vyer (visa bildskisser på dina sidor).
+![items](items.jpg)
+![builds](builds.jpg)
+![guides](guides.jpg)
 ## 3. Databas med ER-diagram (Bild på ER-diagram).
 ## 4. Arkitektur (Beskriv filer och mappar - vad gör/innehåller de?).
-
-
