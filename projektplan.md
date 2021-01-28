@@ -6,4 +6,5 @@
 ![builds](builds.jpg)
 ![guides](guides.jpg)
 ## 3. Databas med ER-diagram (Bild på ER-diagram).
+![ER](ER-diagram.png)
 ## 4. Arkitektur (Beskriv filer och mappar - vad gör/innehåller de?).
