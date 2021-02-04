@@ -8,9 +8,10 @@ Visa de olika föremålen från spelet tillsammans med info om vad de gör.
 Läsa guides som andra användare har skrivit.
 Skapa "builds", alltså kombinationer av 6st föremål och spara dem. 
 ## 2. Vyer (visa bildskisser på dina sidor).
-![items](items.jpg)
-![builds](builds.jpg)
-![guides](guides.jpg)
+![items](images/items.jpg)
+![builds](images/builds.jpg)
+![guides](images/guides.jpg)
 ## 3. Databas med ER-diagram (Bild på ER-diagram).
-![ER](ER-diagram.png)
+![ER](images/ER-diagram.png)
+![EREdit](images/ER-diagramEdit.jpg)
 ## 4. Arkitektur (Beskriv filer och mappar - vad gör/innehåller de?).

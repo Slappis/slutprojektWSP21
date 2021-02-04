@@ -25,7 +25,7 @@ Du kommer även under arbetets gång få miniföreläsningar om hur du kan göra
 
 ## Lektionsplanering
 
-![tid](tid.png)
+![tid](images/tid.png)
 
 
 
