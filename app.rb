@@ -59,3 +59,9 @@ post('/login') do
         "Användarnamnet existerar inte"
     end
 end
+
+get('/items') do
+    db.results_as_hash = true
+    result = db.execute("SELECT * FROM itemPool")
+    slim(:"items", locals:{items:result})
+end
