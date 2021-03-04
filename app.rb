@@ -33,9 +33,9 @@ post('/user/new') do
       #Felhantering
       "Lösenorden matchade inte"
     end
-  end
+end
 
-  post('/login') do
+post('/login') do
     username = params[:username]
     password = params[:password]
     db.results_as_hash = true
@@ -43,19 +43,19 @@ post('/user/new') do
     allUsers = db.execute("SELECT username FROM users")
   
     if allUsers.include?({"username" => username})
-      result = db.execute("SELECT * FROM users WHERE username = ?",username).first
-      pwdigest = result["password"]
-      id = result["id"]
+        result = db.execute("SELECT * FROM users WHERE username = ?",username).first
+        pwdigest = result["password"]
+        id = result["id"]
   
-      if BCrypt::Password.new(pwdigest) == password 
-        session[:id] = id
-        redirect('/home')
+        if BCrypt::Password.new(pwdigest) == password 
+            session[:id] = id
+            redirect('/home')
          
-      else
-        "Fel Lösenord" 
-      end
+        else
+            "Fel Lösenord" 
+        end
   
     else
-      "Användarnamnet existerar inte"
+        "Användarnamnet existerar inte"
     end
-  end
+end
