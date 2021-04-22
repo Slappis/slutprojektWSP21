@@ -43,11 +43,11 @@ post('/login') do
     allUsers = db.execute("SELECT username FROM users")
   
     if allUsers.include?({"username" => username})
-        result = db.execute("SELECT * FROM users WHERE username = ?",username).first
+        result = db.execute("SELECT * FROM Users WHERE username = ?",username).first
         pwdigest = result["password"]
-        id = result["id"]
+        id = result["userID"]
   
-        if BCrypt::Password.new(pwdigest) == password 
+        if BCrypt::Password.new(pwdigest) == password
             session[:id] = id
             redirect('/home')
          
@@ -66,7 +66,7 @@ get('/items') do
     slim(:"items", locals:{items:result})
 end
 
-get ('/builds') do
+get('/builds') do
     id = session[:id].to_i
     db.results_as_hash = true
     result = db.execute("SELECT * FROM buildContent WHERE creatorId = ?", id)
