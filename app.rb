@@ -70,5 +70,7 @@ get('/builds') do
     id = session[:id].to_i
     db.results_as_hash = true
     result = db.execute("SELECT * FROM buildContent WHERE creatorId = ?", id)
-    slim(:"builds", locals:{content:result})
+    items = db.execute("SELECT * FROM itemPool")
+    slim(:"builds", locals:{content:result, items:items})
 end
+

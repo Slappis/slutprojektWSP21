@@ -1,4 +1,6 @@
 p = content
+p = items 
+
 - content.each do |showItem|
     p = showItem["content1"]
     p = showItem["content2"]
@@ -6,3 +8,16 @@ p = content
     p = showItem["content4"]
     p = showItem["content5"]
     p = showItem["content6"]
+
+- items.each do |showItem|
+    p = showItem["itemName"]
+    p = showItem["id"]
+
+form action="createBuild" type="post"
+    label for="boots" Choose boots: 
+    select id="boots" name="boots" size="3"
+        option value="item" Ruby crystal
+        option value="item" Cull
+        option value="item" Riftmaker
+        /visa "itemName" där "rarity" == 0 (boots)
+    input type="submit" value="Create new build"
